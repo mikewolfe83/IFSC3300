@@ -7,6 +7,109 @@
 </head>
 <body>
 
+    <H1>Class Homework Operator Buttons</H1>
+
+    <h2>The + Operator</h2> 
+
+
+
+    <p id="demo"></p>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Num1: <input type="text" name="x" id="x">
+        Num2: <input type="text" name="y" id="y">
+        <input type="button" value="Submit" onclick="displayMessage()">
+      </form>
+
+    <script>
+    function displayMessage() {
+    // Get the values from the form
+    var x = document.getElementById("x").value;
+    var y = document.getElementById("y").value;
+
+    // Create a message using the values
+    var message = "The Answer is" + "" +  x + y;
+
+    //display the 1st Operator
+    document.getElementById("demo").innerHTML = message;
+    }
+    </script>
+
+<h2>The * Operator</h2> 
+
+
+
+<p id="demo2"></p>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Num1: <input type="text" name="x" id="x">
+    Num2: <input type="text" name="y" id="y">
+    <input type="button" value="Submit" onclick="displayMessage()">
+  </form>
+
+<script>
+function displayMessage() {
+// Get the values from the form
+var x = document.getElementById("x").value;
+var y = document.getElementById("y").value;
+
+// Create a message using the values
+var message = x ** y-6;
+
+//display the 1st Operator
+document.getElementById("demo2").innerHTML = message;
+}
+</script>
+
+<h2>The > Operator</h2> 
+
+
+
+<p id="demo3"></p>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Num1: <input type="text" name="x" id="x">
+    Num2: <input type="text" name="y" id="y">
+    <input type="button" value="Submit" onclick="displayMessage()">
+  </form>
+
+<script>
+function displayMessage() {
+// Get the values from the form
+let x = document.getElementById("x").value;
+let y = document.getElementById("y").value;
+let result = x > y;
+// Create a message using the values
+var message = "Is Num1 less than Num2? " + result;
+
+//display the 1st Operator
+document.getElementById("demo3").innerHTML = message;
+}
+</script>
+
+<h2>Name Stamp</h2> 
+
+<p id="demo4"></p>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    First Name: <input type="text" name="fname" id="fname">
+    Last Name: <input type="text" name="lname" id="lname">
+    <input type="button" value="Submit" onclick="displayMessage()">
+  </form>
+
+<script>
+function displayMessage() {
+// Get the values from the form
+let fname = document.getElementById("fname").value;
+let lname = document.getElementById("lname").value;
+
+// Create a message using the values
+var message = "Homework 2 is completed by " + fname + " " + lname + ".";
+
+//display the 1st Operator
+document.getElementById("demo4").innerHTML = message;
+}
+</script>
 
     
     
