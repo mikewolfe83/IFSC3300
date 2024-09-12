@@ -32,19 +32,7 @@
         <input type="button" value="Submit" onclick="displayMessage()">
       </form>
 
-    <script>
-    function displayMessage() {
-    // Get the values from the form
-    var x = document.getElementById("x").value;
-    var y = document.getElementById("y").value;
-
-    // Create a message using the values
-    var message = "The Answer is" + "" +  x + y;
-
-    //display the 1st Operator
-    document.getElementById("demo").innerHTML = message;
-    }
-    </script>
+   
 
 <h2>The * Operator</h2> 
 
@@ -58,19 +46,7 @@
     <input type="button" value="Submit" onclick="displayMessage()">
   </form>
 
-<script>
-function displayMessage() {
-// Get the values from the form
-var x = document.getElementById("x").value;
-var y = document.getElementById("y").value;
 
-// Create a message using the values
-var message = x ** y-6;
-
-//display the 1st Operator
-document.getElementById("demo2").innerHTML = message;
-}
-</script>
 
 <h2>The > Operator</h2> 
 
@@ -84,19 +60,8 @@ document.getElementById("demo2").innerHTML = message;
     <input type="button" value="Submit" onclick="displayMessage()">
   </form>
 
-<script>
-function displayMessage() {
-// Get the values from the form
-let x = document.getElementById("x").value;
-let y = document.getElementById("y").value;
-let result = x > y;
-// Create a message using the values
-var message = "Is Num1 less than Num2? " + result;
 
-//display the 1st Operator
-document.getElementById("demo3").innerHTML = message;
-}
-</script>
+
 
 <h2>Name Stamp</h2> 
 
@@ -109,6 +74,42 @@ document.getElementById("demo3").innerHTML = message;
   </form>
 
 <script>
+
+  function displayMessage() {
+    // Get the values from the form
+    var x = document.getElementById("x").value;
+    var y = document.getElementById("y").value;
+
+    // Create a message using the values
+    var message = "The Answer is" + "" +  x + y;
+
+    //display the 1st Operator
+    document.getElementById("demo").innerHTML = message;
+    }
+
+function displayMessage() {
+// Get the values from the form
+var x = document.getElementById("x").value;
+var y = document.getElementById("y").value;
+
+// Create a message using the values
+var message = x ** y-6;
+
+//display the 1st Operator
+document.getElementById("demo2").innerHTML = message;
+}
+ function displayMessage() {
+// Get the values from the form
+let x = document.getElementById("x").value;
+let y = document.getElementById("y").value;
+let result = x > y;
+// Create a message using the values
+var message = "Is Num1 less than Num2? " + result;
+
+//display the 1st Operator
+document.getElementById("demo3").innerHTML = message;
+}
+ 
 function displayMessage() {
 // Get the values from the form
 let fname = document.getElementById("fname").value;
