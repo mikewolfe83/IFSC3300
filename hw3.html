@@ -44,6 +44,22 @@
     <p id="demo5"></p>
     <p id="demo6"></p>
     <p id="demo7"></p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h1>Mic FLair Game</h1>
+    <img src="/assets/img/mic.JPG"  height="200" width="300">
+    <p>Click The Button To Get A Mic Flair Quote</p>
+    <p id="quote"></p><!-- This displays our quote -->
+    <p id="message"></p><!-- This displays status message -->
+    <div>
+        
+        <button type="button" id="start">Start</button>
+    </div>
+
     
     <script>
     let text = "Truth Table";
@@ -66,6 +82,35 @@
     
     let line6 = "F&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;F" ;
     document.getElementById("demo7").innerHTML = line6;
+
+    const quotes = [
+    'To be the best, you gota beat the best',
+    'When youe see the flamingo, its Bingo!!!',
+    'When Mic is there, know that winning id prepared',
+    'You can not stop greatness',
+    'I am the only human that can stop this train, Bingo!!!',
+    ];
+
+    let words = [];
+    let wordIndex = 0;
+    let startTime = Date.now();
+    const quoteElement = document.getElementById('quote');
+    const messageElement = document.getElementById('message');
+    const typedvalueElement = document.getElementById('typed-value');
+
+    document.getElementById('start').addEventListener('click', () =>{
+    const quoteIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[quoteIndex];
+    words = quote.split(' ');
+    wordIndex = 0;
+    const spanWords = words.map(function(word) { return `<span>${word} </span>`});
+    quoteElement.innerHTML = spanWords.join('');
+    quoteElement.childNodes[0].className = 'highlight';
+    messageElement.innerText = '';
+    typedvalueElement.value = '';
+    typedvalueElement.focus();
+    startTime = new Date().getTime();
+});
     
      
     </script>
