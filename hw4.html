@@ -21,8 +21,66 @@
         </ul>
     </nav>
 
-   
 
+    <h1>JavaScript Functions HW 4</h1>
+
+
+   <h2 id="gm1"> Enter A Number for X </h2>
+
+   <p id="ans"></p>
+
+      
+         <button onclick="con()">Submit</button>
+
+
+
+
+
+
+    <p>How Many Climbs Does It Take</p>
+    
+    <p id="demo"></p>
+    
+    <button value="Submit" onclick="keepClimbing5(1)">Start</button>
+    
+    
+    
+    <script>
+
+        function con(){
+           let X = prompt();
+           document.getElementById("ans").innerHTML += "<br>"+X;
+           //if(X !==3) ;
+             //alert("That The HW Number"); 
+           if (X !== 3) {
+            alert("That Is The HW Number");
+           } else {
+            alert("Not A HW Number");
+           }
+              
+           
+           
+        }
+        
+
+
+
+
+
+    function keepClimbing5(num) {
+      alert("You Are Just Getting Started");
+      if (num===5)
+           alert("keep climbing");
+      if (num===4)
+            alert("feel the burn");
+      if(num===3)
+            alert("can you feel it");
+           else keepClimbing5(num+1);
+           alert("you are at the top");
+    }
+    
+    
+    </script>
     
 
     <footer>
