@@ -18,21 +18,64 @@
             <li><a href="hw2.html">Homework 2</a></li>
             <li><a href="hw3.html">Homework 3</a></li>
             <li><a href="hw4.html">Homework 4</a></li>
+            <li><a href="hw5.html">Homework 5</a></li>
         </ul>
     </nav>
 
 
+<h1>What is the minimum percentage score on a HW in this course?</h1>
+
+<p id="demo"></p>
+
+ <button type="button" onclick="ans0()">Answer</button>
+
+
+ <h1>1st function</h1>
+
+ <p id="demo2"></p>
+
+ <button type="button" onclick="func1()">Answer</button>
+
+ <h1>2nd function</h1>
+
+ <p id="demo3"></p>
+
+ <button type="button" onclick="func2(1)">Answer</button>
+
+
+ <h1>Call Myself function</h1>
+
+ <p id="demo3"></p>
+
+ <button type="button" onclick="call()">Call</button>
+
+
+ <h1>Try This Function</h1>
+
+ <p id="demo4"></p>
+
+ <button type="button" onclick="window.print()">Print</button>
+
+
+ <h1>Try This Function</h1>
+
+ <p id="demo5"></p>
+
+ <button type="button" onclick="window.printcode()">Print</button>
+
+
+ <h1>Array Loop</h1>
+
+ <p id="demo7"></p>
+
+  <p id="demo6"></p>
+
+ <button type="button" onclick="window.looparray()">Print</button>
 
 
 
 
 
-
-
-
-    
-
-   
 
     
 
@@ -42,8 +85,58 @@
     
     
     
+    
     </div><!-- closing conatiner-->
+ <script> 
+
+ function ans0(){
+    document.getElementById("demo").innerHTML = 50 ;
+ }
+
+ function func1(){
+
+    alert(" Thanks FOr Triggering Function 1");
+ }
+
+ function func2(num){
+   alert("Keep Alerting Or Triggering Function 2");
+   if (num===3)
+        alert(" You Almost There");
+    else func2(num+1);
+    alert( "Get ready to go to the next question" +num);
+ }
+
+function call(){
+    alert("Calling The Function");
+
+    call = function(){
+         alert("Function Already Called");
+    } ;
+}
+ 
+function printcode(){
+ 
+    let text = "funtion printcode()";
     
+    document.getElementById("demo5").innerHTML = text;
+}
+
+
+
+function looparray(){
+     
+    const semester = ["sem1","sem2","sem3","sem4"];
+
+    let size = semester.length;
+
+    document.getElementById("demo6").innerHTML = semester.toString();
+
+    document.getElementById("demo7").innerHTML += "Lentgh of Array is" + " " + size;
+}
+
+
+ 
     
+</script>    
 </body>
 </html>
