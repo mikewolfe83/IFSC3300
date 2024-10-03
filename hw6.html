@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header></header>
+        <h1>Welcome Mike Gray IFSC 3300 Class HW Site</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hw1.html">Homework 1</a></li>
+            <li><a href="hw2.html">Homework 2</a></li>
+            <li><a href="hw3.html">Homework 3</a></li>
+            <li><a href="hw4.html">Homework 4</a></li>
+            <li><a href="hw5.html">Homework 5</a></li>
+            <li><a href="hw6.html">Homework 5</a></li>
+        </ul>
+    </nav>
+
+
+
+    <h1>Homework 6</h1>
+
+    <p>Lets Play The Budget Game</p>
+    
+    <p> You Have $2000.00 USD </p>
+    
+    <p>Enter The Cost Of Bills</p>
+
+   <div id="center" style=" border: 2px solid; width: 600px; padding: 15px;">
+ <form>
+    <ul>
+   Gas: <input id="gas">
+   Lights:<input id="lights">
+   Water:<input id="water">
+   Cell Phone:<input id="cell phone">
+   Car:<input id="car">
+   Credit:<input id="credit">
+</ul>
+
+
+    <button type="button" onclick="CalcBills()">Submit</button>
+</form> 
+</div> 
+    <p id="total"></p>
+
+
+    <h2>Question 2</h2>
+
+    <p>What are the attribute names and attribute values of the object predefined in a web page called document?</p>
+
+    <button type="button" onclick="ans1()">Click For The Answer</button> 
+
+    <p id="dom"></p>
+
+
+
+    <h2>Question 3</h2>
+
+    <p>Click anywhere in the document to display the active element </p>
+
+    <button type="button" onclick="ans2()">Click For The Result</button> 
+
+    <p id="dom2"></p>
+
+
+    <footer>
+        <p>&copy; 2024 IFSC 3300. All rights reserved.</p>
+    </footer>
+    
+    
+    
+    </div><!-- closing conatiner-->
+
+    <script>
+
+function CalcBills() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("gas").value;
+  let a = document.getElementById("lights").value;
+  let b = document.getElementById("water").value;
+  let c = document.getElementById("cell phone").value;
+  let d = document.getElementById("car").value;
+  let e = document.getElementById("credit").value;
+  
+  // perform the bill minus the total budget
+  let text;
+  let total = parseFloat(x) + parseFloat(a) + parseFloat(b)
+  			 + parseFloat(c) + parseFloat(d) + parseFloat(e);
+             
+  let budget = 2000 - total;
+    
+    
+    
+  document.getElementById("total").innerHTML = " Out Of $2000 USD You Have" + "  "   + budget + " " + "Left" 
+  
+  
+  }
+
+
+ function ans1(){
+    
+    const link = {fname:"https://www.w3schools.com/jsref/dom_obj_document.asp", lname:"https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" }
+
+let txt = "";
+for (let x in document) {
+  txt += link[x] + " ";
+}
+
+document.getElementById("dom").innerHTML = txt;
+  
+
+ }
+
+ function ans1(){
+    
+    const link = {fname:"https://www.w3schools.com/jsref/dom_obj_document.asp", lname:"https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" }
+
+let txt = "";
+for (let x in document) {
+  txt += link[x] + " ";
+}
+
+document.getElementById("dom").innerHTML = txt;
+  
+const element = document.activeElement.tagName;
+  document.getElementById("demo").innerHTML = element;
+
+ }
+
+ function ans2(){
+
+  const element = document.activeElement.tagName;
+  document.getElementById("dom2").innerHTML = element;
+
+ }
+
+
+    </script>
+    
+    
+</body>
+</html>
