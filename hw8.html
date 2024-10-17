@@ -29,56 +29,44 @@
 
     <h1>Homework 7</h1>
 
-<h2>Parenthesis Checker v2</h2>
-<p>Inspect the source to view comments of the code</p>
+<h2>Split Demo</h2>
+<p>Click On The Button To See A Spit Demo</p>
 
-<p id="demo"></p>
+<p id="split"></p>
 
-<button onclick="check();">Check for balanced parentheses</button>
-
-
+<button onclick="ans1();">Check for balanced parentheses</button>
 
 
+<h1>Numbers Section</h1>
 
-    <script>
+<p>Check if 3===3.0. Why?</p>
 
-let parenStack = []; // set value for variable parenStack
-let expression = "Expression has not yet been set.";   // set value for variable expression
+<p>Ans: Comparing two JavaScript objects always returns false</p>
 
-function check(){ // build function to check for parenthesis
-   expression = prompt("type in an arithmetic expression!"); // prompts user to enter a value 
-   document.getElementById('demo').innerHTML // grabs the DOM element by the demo id tag 
-      = "You typed: "+expression+"<br>"; //prints out value
-   expression = expression.split("");
-   document.getElementById('demo').innerHTML // grabs the DOM element by the demo id tag
-      += "Converted to an array of chars: "+expression+"<br>"; //prints out value plus concatenation
+<p>================================================================</p>
 
-   for (index = 0 ; index < expression.length ; index++){ // for loop that increments based on expression length
-       if (expression[index]=== "(" ){ // if expression performing a push operation
-          document.getElementById("demo").innerHTML += "Pushing a '('"+"<br>";
-          parenStack.push( "(" );
-       }
-       else if (expression[index]=== ")" ){ // anything else  perform a pop operation
-          if (parenStack.pop()===undefined){
-             document.getElementById('demo').innerHTML 
-                += "No '(' to pop: Unbalanced!<br>";
-          }
-          else {document.getElementById("demo").innerHTML += "Popping a '('"+"<br>"; // else printout string 
-          }
-       }
-   }
-   if (parenStack[0]=== "(" ){ // if statement to print out string if more ) are needed
-      document.getElementById('demo').innerHTML 
-         += "One or more ')' needed--&nbsp;&nbsp;&nbsp;"
-            + parenStack
-            + "&nbsp;&nbsp;&nbsp;--unbalanced!!!";
-   }
-   else {document.getElementById('demo').innerHTML += "Finished."}
-}
+<p>Find the number of zeros such that 3===3.000…01</p>
+
+<p> Why can this happen?</p>
+
+<p> ans: Because the strict equality operator === it will always return false  </p>
+
+<p>================================================================</p>
 
 
 
-    </script>
+
+
+
+ <script>
+  function ans1(){
+  let text = "Unix,Linux,Metric,British";
+  const myArray = text.split(",");
+  document.getElementById("split").innerHTML = myArray[1];
+  }
+
+
+</script>
     
     
 </body>
