@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header></header>
+        <h1>Welcome Mike Gray IFSC 3300 Class HW Site</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hw1.html">Homework 1</a></li>
+            <li><a href="hw2.html">Homework 2</a></li>
+            <li><a href="hw3.html">Homework 3</a></li>
+            <li><a href="hw4.html">Homework 4</a></li>
+            <li><a href="hw5.html">Homework 5</a></li>
+            <li><a href="hw6.html">Homework 6</a></li>
+            <li><a href="hw7.html">Homework 6</a></li>
+            <li><a href="hw8.html">Homework 6</a></li>
+        </ul>
+    </nav>
+
+
+
+    <h1>Homework 7</h1>
+
+<h2>Parenthesis Checker v2</h2>
+<p>Inspect the source to view comments of the code</p>
+
+<p id="demo"></p>
+
+<button onclick="check();">Check for balanced parentheses</button>
+
+
+
+
+
+    <script>
+
+let parenStack = []; // set value for variable parenStack
+let expression = "Expression has not yet been set.";   // set value for variable expression
+
+function check(){ // build function to check for parenthesis
+   expression = prompt("type in an arithmetic expression!"); // prompts user to enter a value 
+   document.getElementById('demo').innerHTML // grabs the DOM element by the demo id tag 
+      = "You typed: "+expression+"<br>"; //prints out value
+   expression = expression.split("");
+   document.getElementById('demo').innerHTML // grabs the DOM element by the demo id tag
+      += "Converted to an array of chars: "+expression+"<br>"; //prints out value plus concatenation
+
+   for (index = 0 ; index < expression.length ; index++){ // for loop that increments based on expression length
+       if (expression[index]=== "(" ){ // if expression performing a push operation
+          document.getElementById("demo").innerHTML += "Pushing a '('"+"<br>";
+          parenStack.push( "(" );
+       }
+       else if (expression[index]=== ")" ){ // anything else  perform a pop operation
+          if (parenStack.pop()===undefined){
+             document.getElementById('demo').innerHTML 
+                += "No '(' to pop: Unbalanced!<br>";
+          }
+          else {document.getElementById("demo").innerHTML += "Popping a '('"+"<br>"; // else printout string 
+          }
+       }
+   }
+   if (parenStack[0]=== "(" ){ // if statement to print out string if more ) are needed
+      document.getElementById('demo').innerHTML 
+         += "One or more ')' needed--&nbsp;&nbsp;&nbsp;"
+            + parenStack
+            + "&nbsp;&nbsp;&nbsp;--unbalanced!!!";
+   }
+   else {document.getElementById('demo').innerHTML += "Finished."}
+}
+
+
+
+    </script>
+    
+    
+</body>
+</html>
