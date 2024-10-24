@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header></header>
+        <h1>Welcome Mike Gray IFSC 3300 Class HW Site</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hw1.html">Homework 1</a></li>
+            <li><a href="hw2.html">Homework 2</a></li>
+            <li><a href="hw3.html">Homework 3</a></li>
+            <li><a href="hw4.html">Homework 4</a></li>
+            <li><a href="hw5.html">Homework 5</a></li>
+            <li><a href="hw6.html">Homework 6</a></li>
+            <li><a href="hw7.html">Homework 7</a></li>
+            <li><a href="hw8.html">Homework 8</a></li>
+            <li><a href="hw9.html">Homework 9</a></li>
+        </ul>
+    </nav>
+
+
+
+    <h1>Homework 9</h1>
+
+
+<button style="background-color:#FC9630;color:blue;font-size:30pt;height:60px;">My favorite button</button>
+<h2>Explain why the above button is bright orange.</h2>
+
+
+<p id="split"></p>
+
+<button onclick="ans1();">Answer</button>
+
+
+<br>
+<br>
+<br>
+
+<h2>Hover over this button</h2>
+
+<button id="col" onmouseover="colo(this)">Answer</button>
+
+<br>
+<br>
+<br>
+
+<button id="br" onmouseover="bro(this)" style="background-color:#f38518;color:blue;font-size:30pt;height:60px;">My favorite button</button>
+
+ <script>
+  function ans1(){
+  let text = "#fc9630 hex color red value is 252, green value is 150 and the blue value of its RGB is 48. Cylindrical-coordinate representations (also known as HSL) of color #fc9630 hue: 0.08 , saturation: 0.97 and the lightness value of fc9630is 0.59.";
+  //const myArray = text.split(",");
+  document.getElementById("split").innerHTML = text;
+  }
+
+
+  function colo(x){
+
+    document.getElementById('col').style.color='magenta';
+    document.getElementById('col').style.backgroundColor='black';
+
+  }
+
+  function bro(x){
+    document.getElementById('br').style.color='gold';
+document.getElementById('br').style.backgroundColor='brown';
+
+
+}
+
+ 
+
+
+
+</script>
+    
+    
+</body>
+</html>
