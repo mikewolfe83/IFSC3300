@@ -25,52 +25,51 @@
             <li><a href="hw9.html">Homework 9</a></li>
             <li><a href="hw10.html">Homework 10</a></li>
             <li><a href="hw11.html">Homework 11</a></li>
-            <li><a href="hw12.html">Homework 12</a></li>
         </ul>
     </nav>
 
+    <div id="div1">
+
+      <p id="p1">This is a paragraph.</p>
+      
+      <p id="p2">This is another paragraph.</p>
+      
+      </div>
+
+      <div id="classhw">
+
+        <h1>Class Answers</h1>
 
 
-    <h1>Homework 8</h1>
+      </div>
+      
+      <script>
+      
+      var paragraphNode = document.createElement("b");
+      
+      var textNode = document.createTextNode(paragraphNode.nodeType);
+      
+      textNode = document.createTextNode(textNode.nodeName);
+      
+      paragraphNode.appendChild(textNode);
+      
+      var divisionNode = document.getElementById("div1");
+      
+      var someChild = divisionNode.childNodes[3];
+      
+      divisionNode.insertBefore(paragraphNode,someChild);
+      
+      </script>
 
-<h2>Split Demo</h2>
-<p>Click On The Button To See A Spit Demo</p>
+    
 
-<p id="split"></p>
-
-<button onclick="ans1();">Check for balanced parentheses</button>
-
-
-<h1>Numbers Section</h1>
-
-<p>Check if 3===3.0. Why?</p>
-
-<p>Ans: Comparing two JavaScript objects always returns false</p>
-
-<p>================================================================</p>
-
-<p>Find the number of zeros such that 3===3.000…01</p>
-
-<p> Why can this happen?</p>
-
-<p> ans: Because the strict equality operator === it will always return false  </p>
-
-<p>================================================================</p>
-
-
-
-
-
-
- <script>
-  function ans1(){
-  let text = "Unix,Linux,Metric,British";
-  const myArray = text.split(",");
-  document.getElementById("split").innerHTML = myArray[1];
-  }
-
-
-</script>
+    <footer>
+        <p>&copy; 2024 IFSC 3300. All rights reserved.</p>
+    </footer>
+    
+    
+    
+    </div><!-- closing conatiner-->
     
     
 </body>
