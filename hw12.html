@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #myProgress {
+      width: 50%;
+      height: 30px;
+      position: relative;
+      background-color: #ccc;
+    }
+    
+    #myBar {
+      background-color:blue;
+      width: 5px;
+      height: 30px;
+      position: absolute;
+    }
+    </style>
 <body>
 
     <header></header>
@@ -53,6 +68,21 @@
 
         <p>=====================================================================================</p>
 
+        <div>
+
+            <h1>HW Progress Bar</h1>
+
+            <div id="myProgress">
+              <div id="myBar"></div>
+            </div>
+            
+            <br>
+            <button onclick="move()">Click Me</button> 
+            <p id="compl"></p>
+
+
+        </div>
+
         
 
 
@@ -73,6 +103,22 @@
       var someChild = divisionNode.childNodes[9];
       
       divisionNode.insertBefore(paragraphNode,someChild);
+
+      function move() {
+  const element = document.getElementById("myBar");   
+  let width = 0;
+  const id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      element.style.width = width + '%'; 
+    }
+  }
+  document.getElementById("compl").innerHTML = "Process Completed";
+}
+
       
       </script>
 
