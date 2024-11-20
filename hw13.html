@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header></header>
+        <h1>Welcome Mike Gray IFSC 3300 Class HW Site</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hw1.html">Homework 1</a></li>
+            <li><a href="hw2.html">Homework 2</a></li>
+            <li><a href="hw3.html">Homework 3</a></li>
+            <li><a href="hw4.html">Homework 4</a></li>
+            <li><a href="hw5.html">Homework 5</a></li>
+            <li><a href="hw6.html">Homework 6</a></li>
+            <li><a href="hw7.html">Homework 7</a></li>
+            <li><a href="hw8.html">Homework 8</a></li>
+            <li><a href="hw9.html">Homework 9</a></li>
+            <li><a href="hw10.html">Homework 10</a></li>
+            <li><a href="hw11.html">Homework 11</a></li>
+            <li><a href="hw12.html">Homework 12</a></li>
+            <li><a href="hw13.html">Homework 13</a></li>
+        </ul>
+    </nav>
+
+    <div id="div1">
+
+      <p id="p1">This is a paragraph.</p>
+      
+      <p id="p2">This is another paragraph.</p>
+      
+      </div>
+
+      <div id="classhw">
+
+        <h1>Class Answers</h1>
+
+        <p>Q: 1a. Find the number 3 in the code. Try replacing it with the following numbers: 0, 1, 2, 3, 4, 100. What does each number do? Why? </p>
+
+        <p>A: changes the position of the childNode in div1 on the dom</p>
+
+        <p>=====================================================================================</p>
+
+        <p>1b. For the value 3, compare having the two paragraphs on separate lines (as they are above) to having them on the same line with no spaces between them, like this: </p>
+
+        <p> Explanaiton: IT will be easier for the DOM to locate the siblings and minimize crashing when navigating the DOM</p>
+
+        <p>=====================================================================================</p>
+
+        <div>
+
+            <h1>HW Progress Bar</h1>
+
+            <div id="myProgress">
+              <div id="myBar"></div>
+            </div>
+            
+            <br>
+            <button onclick="move()">Click Me</button> 
+            <p id="compl"></p>
+
+
+        </div>
+
+        
+
+
+      </div>
+      
+      <script>
+      
+      var paragraphNode = document.createElement("b");
+      
+      var textNode = document.createTextNode(paragraphNode.nodeType);
+      
+      textNode = document.createTextNode(textNode.nodeName);
+      
+      paragraphNode.appendChild(textNode);
+      
+      var divisionNode = document.getElementById("div1");
+      
+      var someChild = divisionNode.childNodes[9];
+      
+      divisionNode.insertBefore(paragraphNode,someChild);
+
+      function move() {
+  const element = document.getElementById("myBar");   
+  let width = 0;
+  const id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      element.style.width = width + '%'; 
+    }
+  }
+  document.getElementById("compl").innerHTML = "Process Completed";
+}
+
+      
+      </script>
+
+    
+
+    <footer>
+        <p>&copy; 2024 IFSC 3300. All rights reserved.</p>
+    </footer>
+    
+    
+    
+    </div><!-- closing conatiner-->
+    
+    
+</body>
+</html>

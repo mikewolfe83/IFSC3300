@@ -28,19 +28,18 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="hw1.html">Homework 1</a></li>
-            <li><a href="hw2.html">Homework 2</a></li>
-            <li><a href="hw3.html">Homework 3</a></li>
-            <li><a href="hw4.html">Homework 4</a></li>
-            <li><a href="hw5.html">Homework 5</a></li>
-            <li><a href="hw6.html">Homework 6</a></li>
-            <li><a href="hw7.html">Homework 7</a></li>
-            <li><a href="hw8.html">Homework 8</a></li>
-            <li><a href="hw9.html">Homework 9</a></li>
-            <li><a href="hw10.html">Homework 10</a></li>
-            <li><a href="hw11.html">Homework 11</a></li>
-            <li><a href="hw11.html">Homework 12</a></li>
+          <li><a href="hw2.html">Homework 2</a></li>
+          <li><a href="hw3.html">Homework 3</a></li>
+          <li><a href="hw4.html">Homework 4</a></li>
+          <li><a href="hw5.html">Homework 5</a></li>
+          <li><a href="hw6.html">Homework 6</a></li>
+          <li><a href="hw7.html">Homework 7</a></li>
+          <li><a href="hw8.html">Homework 8</a></li>
+          <li><a href="hw9.html">Homework 9</a></li>
+          <li><a href="hw10.html">Homework 10</a></li>
+          <li><a href="hw11.html">Homework 11</a></li>
+          <li><a href="hw12.html">Homework 12</a></li>
+          <li><a href="hw13.html">Homework 13</a></li>
         </ul>
     </nav>
 
@@ -72,13 +71,6 @@
 
             <h1>HW Progress Bar</h1>
 
-            <div id="myProgress">
-              <div id="myBar"></div>
-            </div>
-            
-            <br>
-            <button onclick="move()">Click Me</button> 
-            <p id="compl"></p>
 
 
         </div>
@@ -90,35 +82,7 @@
       
       <script>
       
-      var paragraphNode = document.createElement("b");
       
-      var textNode = document.createTextNode(paragraphNode.nodeType);
-      
-      textNode = document.createTextNode(textNode.nodeName);
-      
-      paragraphNode.appendChild(textNode);
-      
-      var divisionNode = document.getElementById("div1");
-      
-      var someChild = divisionNode.childNodes[9];
-      
-      divisionNode.insertBefore(paragraphNode,someChild);
-
-      function move() {
-  const element = document.getElementById("myBar");   
-  let width = 0;
-  const id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      element.style.width = width + '%'; 
-    }
-  }
-  document.getElementById("compl").innerHTML = "Process Completed";
-}
-
       
       </script>
 
