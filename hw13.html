@@ -33,9 +33,18 @@
 
     <div id="div1">
 
-      <p id="p1">This is a paragraph.</p>
+      <h1>The Document Object</h1>
+      <h2>The getElementById() Method Example</h2>
       
-      <p id="p2">This is another paragraph.</p>
+      <p id="demo"></p>
+      <p id="demo2"></p>
+      
+      
+      <script>
+      document.getElementById("demo").innerHTML = "Hello World";
+      window.document.getElementById("demo2").innerHTML= "Good Bye World";
+      </script>
+      
       
       </div>
 
@@ -43,29 +52,91 @@
 
         <h1>Class Answers</h1>
 
-        <p>Q: 1a. Find the number 3 in the code. Try replacing it with the following numbers: 0, 1, 2, 3, 4, 100. What does each number do? Why? </p>
+        <p>  Q: 𝔻oes window.document.getElementById() do the same thing as document.getElementById()? Why or why not? </p>
 
-        <p>A: changes the position of the childNode in div1 on the dom</p>
+        <p>A: They are the same function, window is not required its already baked into the function</p>
 
         <p>=====================================================================================</p>
 
-        <p>1b. For the value 3, compare having the two paragraphs on separate lines (as they are above) to having them on the same line with no spaces between them, like this: </p>
+        <h1>The Window Screen Object</h1>
+        <h2>The height Property</h2>
+        
+        <p id="demoa"></p>
+        <p id="demob"></p>
 
-        <p> Explanaiton: IT will be easier for the DOM to locate the siblings and minimize crashing when navigating the DOM</p>
+
+        <p>Q: 𝔻oes window.innerHeight have the same value as screen.height? Why or why not? </p>
+
+        <p> window.innerHeight measures in inches and screen.height measures in pixels</p>
 
         <p>=====================================================================================</p>
 
         <div>
+         
+  
+  
+          <p>Q: 𝔻oes screen.height have the same value as screen.availHeight? Why or why not? </p>
+  
+          <p> A: They both have the same value and measure in PX</p>
+  
 
-            <h1>HW Progress Bar</h1>
 
-            <div id="myProgress">
-              <div id="myBar"></div>
-            </div>
-            
-            <br>
-            <button onclick="move()">Click Me</button> 
-            <p id="compl"></p>
+        </div>
+
+        <p>=====================================================================================</p>
+
+        <div>
+         
+          <h1>The Window Location Object</h1>
+          <h2>The href Property</h2>
+
+          <p id="demod"></p>
+  
+  
+          <p>Q: 𝔾et the window.location.href property. Does the result make sense?</p>
+  
+          <p> A: It does, it tells you what is the URL, may not be pratical. However somwhat useful.</p>
+  
+
+
+        </div>
+
+        <p>=====================================================================================</p>
+
+        <div>
+         
+          <h1>The Window Navigator Object</h1>
+          <h2>The cookieEnabled Property</h2>
+
+          <p id="demoe"></p>
+  
+  
+          <p>Q: 𝔾et the window.location.href property. Does the result make sense?</p>
+  
+          <p> A: It does, it tells you what is the URL, may not be pratical. However somwhat useful.</p>
+  
+
+
+        </div>
+
+        <p>=====================================================================================</p>
+
+        <div>
+         
+          <h1>The Window Object</h1>
+          <h2>The alert() Method</h2>
+          
+          <p>Click the button to display an alert box.</p>
+          
+          <button onclick="myFunction()">Option A</button>
+          
+          <button onclick="myFunctionB()">Option B</button>
+  
+  
+          <p>Q: 𝔻oes window.alert(“Hi!”); do the same thing as alert(“Hi!”); ? Why or why not?</p>
+  
+          <p> A: They give you the same value, some people just like taking different paths.</p>
+  
 
 
         </div>
@@ -77,35 +148,29 @@
       
       <script>
       
-      var paragraphNode = document.createElement("b");
-      
-      var textNode = document.createTextNode(paragraphNode.nodeType);
-      
-      textNode = document.createTextNode(textNode.nodeName);
-      
-      paragraphNode.appendChild(textNode);
-      
-      var divisionNode = document.getElementById("div1");
-      
-      var someChild = divisionNode.childNodes[9];
-      
-      divisionNode.insertBefore(paragraphNode,someChild);
+      document.getElementById("demo").innerHTML = "Hello World";
+      window.document.getElementById("demo2").innerHTML= "Good Bye World";
 
-      function move() {
-  const element = document.getElementById("myBar");   
-  let width = 0;
-  const id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      element.style.width = width + '%'; 
-    }
-  }
-  document.getElementById("compl").innerHTML = "Process Completed";
-}
+      let h = innerHeight;
+      document.getElementById("demoa").innerHTML = "<br>Height: " + h;
 
+      let height = screen.height;
+      document.getElementById("demob").innerHTML =  height + "px";
+
+      let url = location.href;
+      document.getElementById("demod").innerHTML = url;
+
+      let cookies = navigator.cookieEnabled;
+      document.getElementById("demoe").innerHTML = "Cookies enabled: " + cookies;
+
+      function myFunction() {
+          alert("This is the alert function!");
+        }
+
+        function myFunctionB(){
+          window.alert("This is the window alert function");
+        }
+  
       
       </script>
 
