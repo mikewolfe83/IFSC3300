@@ -33,40 +33,56 @@
 
     <div id="div1">
 
-      <h1> Cookies Security Commentary Research<h1>
+      <h1> Object that prints values of HD Truck<h1>
+       
+        <p id="demo"></p>
 
+        <img src="/assets/img/HD_Truck.jpg" alt="Truck">
        
  
     </div>
 
       <div id="cookie">
 
-        <h1>See The Cookie Flavor</h1>
+        <h1> constructor function </h1>
+
+        <p id="demo2"></p>
+
+        <img src="/assets/img/F150-2.jpg" alt="Truck">
+        
+
+      </div>
+
+                
+
+      
+
 
          
-        
-
-      </div>
-
-       <div>
-             <h1>Check this expression * & +</h1>
-
-
-             
-
-
-       </div>
-          
-
-        
-
-
-      </div>
-      
       <script>
-   
+        
+            const truck = {
+            truckMake: "GMC",
+            truckModel: "2500",
+            truckPackage: "Denali",
+            Year: 2024,
+            vehichle: function() {
+              return this.truckMake + " " + this.truckModel + " " + this.truckPackage;
+            }
+          };
 
+            document.getElementById("demo").innerHTML += truck.vehichle();
 
+          function HdTruck(make, model, package, fuel) {
+            this.make= make;
+            this.model = model;
+            this.package = package;
+            this.fuel = fuel;
+           };
+          // Create a Person object
+            const newRide = new HdTruck("Ford", "F150", "Platinum", "Gas");
+          /*Output 2*/ document.getElementById("demo2").innerHTML +=
+            newRide.make + " is " + newRide.model + " " + newRide.package + "<br>";  
 
       
       </script>
