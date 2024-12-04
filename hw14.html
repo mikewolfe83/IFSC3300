@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="checkCookie()">
+
+    <header></header>
+        <h1>Welcome Mike Gray IFSC 3300 Class HW Site</h1>
+    </header>
+
+    <nav>
+        <ul>
+          <ul>
+            <li><a href="hw2.html">Homework 2</a></li>
+            <li><a href="hw3.html">Homework 3</a></li>
+            <li><a href="hw4.html">Homework 4</a></li>
+            <li><a href="hw5.html">Homework 5</a></li>
+            <li><a href="hw6.html">Homework 6</a></li>
+            <li><a href="hw7.html">Homework 7</a></li>
+            <li><a href="hw8.html">Homework 8</a></li>
+            <li><a href="hw9.html">Homework 9</a></li>
+            <li><a href="hw10.html">Homework 10</a></li>
+            <li><a href="hw11.html">Homework 11</a></li>
+            <li><a href="hw12.html">Homework 12</a></li>
+            <li><a href="hw13.html">Homework 13</a></li>
+            <li><a href="hw14.html">Homework 13</a></li>
+            <li><a href="hw15.html">Homework 13</a></li>
+        </ul>
+    </nav>
+
+    <div id="div1">
+
+      <h1> Cookies Security Commentary Research<h1>
+
+        <p> Cookies play a critical role in web development for storing user session data, preferences, and authentication details. However, improper cookie handling in JavaScript can introduce significant security vulnerabilities. </p>
+        <p> Key security concerns include Cross-Site Scripting (XSS), where malicious scripts access cookies containing sensitive information. To mitigate this risk, cookies should be flagged as HttpOnly, restricting their access from JavaScript. Additionally, enabling the Secure flag ensures cookies are transmitted only over HTTPS, protecting them from interception. </p>
+        <p> Another vital measure is the SameSite attribute, which prevents cookies from being sent with cross-site requests, reducing the risk of Cross-Site Request Forgery (CSRF) attacks. Setting SameSite=Strict or SameSite=Lax provides effective protection based on application needs. </p>
+        <p> Lastly, sensitive data should never be stored in cookies in plain text. Instead, encryption and careful validation should be implemented to minimize risks, enhancing overall security. Cookies can be used for either good things or bad things. Cookies are in the eyes of the beholder and will determine if a person is a Jedi or on the Darkside. </p>
+ 
+      </div>
+
+      <div id="cookie">
+
+        <h1>See The Cookie Flavor</h1>
+
+         
+        <button onclick="checkCookie()";>Verify The Flavor</button>
+
+        </div>
+
+       <div>
+             <h1>Check this expression * & +</h1>
+
+
+             <P>Offensively, I’m seeing him rely more on physicality than athleticism. Again, he can still dial it up—the posterizing of Orlando Magic forward Jonathan Isaac last month is a good example—but he’s not regularly playing above the rim. It sort of reminds me of an aging boxer. Think George Foreman, who won a heavyweight title in his 40s. Or, more recently, Vasiliy Lomachenko, one of the most skilled boxers in my lifetime who in his mid-30s isn’t quite as bouncy as he used to be. Both those guys are still great, but they are a level below what they used to be. </P>
+
+             <p>A global search for an "l", followed by zero or more "i" characters:</p>
+
+              <p id="demo"></p>
+              <p id="demo2"></p>
+
+
+       </div>
+          
+
+        
+
+
+      </div>
+      
+      <script>
+      function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("flavor");
+  if (user != "") {
+    alert("flavor you like is " + user);
+  } else {
+     user = prompt("Please enter your flavor:","");
+     if (user != "" && user != null) {
+       setCookie("flavor", user, 30);
+     }
+  }
+}
+
+let text = "Offensively, I’m seeing him rely more on physicality than athleticism. Again, he can still dial it up—the posterizing of Orlando Magic forward Jonathan Isaac last month is a good example—but he’s not regularly playing above the rim. It sort of reminds me of an aging boxer. Think George Foreman, who won a heavyweight title in his 40s. Or, more recently, Vasiliy Lomachenko, one of the most skilled boxers in my lifetime who in his mid-30s isn’t quite as bouncy as he used to be. Both those guys are still great, but they are a level below what they used to be.!"; 
+let pattern = /li*/g;
+let pattern2 = /o+/g;
+let result = text.match(pattern);
+let result2 = text.match(pattern2)
+
+document.getElementById("demo").innerHTML = result;
+document.getElementById("demo2").innerHTML = result2;
+
+
+      
+      </script>
+
+    
+
+    <footer>
+        <p>&copy; 2024 IFSC 3300. All rights reserved.</p>
+    </footer>
+    
+    
+    
+    </div><!-- closing conatiner-->
+    
+    
+</body>
+</html>
